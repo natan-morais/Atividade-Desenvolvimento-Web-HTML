@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Médias</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Calculadora de Média</h1>
+        <input type="number" max="10" id="nota_1" placeholder="Insira a nota 1">
+        <input type="number" max="10" id="nota_2" placeholder="Insira a nota 2">
+        <input type="number" max="10" id="nota_3" placeholder="Insira a nota 3">
+
+        <button id="calcular" onclick="calcular()">Calcular</button>
+
+        <p>A sua média é: <span id="media"></span></p>
+        <p id="status"></p>
+    </div>
+
+    <script>
+        function calcular(){
+            let n1, n2, n3, media;
+            n1 = document.getElementById('nota_1').value;
+            n2 = document.getElementById('nota_2').value;
+            n3 = document.getElementById('nota_3').value;
+
+            // Converte as notas de string para número decimal
+            media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3;
+
+            // Exibe a média calculada
+            document.getElementById('media').innerHTML = media.toFixed(2);
+
+            // Determina o status de aprovação
+            if (media < 7) {
+                document.getElementById('status').innerHTML = "Reprovado";
+            } else {
+                document.getElementById('status').innerHTML = "Aprovado";
+            }
+        }
+    </script>
+</body>
+</html>
 
