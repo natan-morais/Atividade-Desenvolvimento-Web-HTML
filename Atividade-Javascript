@@ -25,13 +25,13 @@
             n2 = document.getElementById('nota_2').value;
             n3 = document.getElementById('nota_3').value;
 
-            // Converte as notas de string para número decimal
+           
             media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3)) / 3;
 
-            // Exibe a média calculada
+            
             document.getElementById('media').innerHTML = media.toFixed(2);
 
-            // Determina o status de aprovação
+            
             if (media < 7) {
                 document.getElementById('status').innerHTML = "Reprovado";
             } else {
