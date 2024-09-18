@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h2>Calculadora Simples</h2>
+    <input type="text" id="num1" placeholder="Primeiro número"><br>
+    <input type="text" id="num2" placeholder="Segundo número"><br>
+    <input type="text" id="resultado" placeholder="Resultado" disabled>
+
+    <div>
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+        <button onclick="limpar()">C</button>
+    </div>
+
+    <script>
+       
+        function calcular(operacao) {
+            var num1 = parseFloat(document.getElementById("num1").value);  // Pega o valor do primeiro número
+            var num2 = parseFloat(document.getElementById("num2").value);  // Pega o valor do segundo número
+            var resultado = 0;
+
+            
+            if (operacao === '+') {
+                resultado = num1 + num2;
+            } else if (operacao === '-') {
+                resultado = num1 - num2;
+            } else if (operacao === '*') {
+                resultado = num1 * num2;
+            } else if (operacao === '/') {
+                resultado = num1 / num2;
+            }
+
+        
+            document.getElementById("resultado").value = resultado;
+        }
+
+      
+        function limpar() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("resultado").value = "";
+        }
+    </script>
+
+</body>
+</html>
