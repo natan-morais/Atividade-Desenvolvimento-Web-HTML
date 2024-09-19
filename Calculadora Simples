@@ -23,7 +23,7 @@
        
         function calcular(operacao) {
             var num1 = parseFloat(document.getElementById("num1").value);
-            var num2 = parseFloat(document.getElementById("num2").value);  // Pega o valor do segundo número
+            var num2 = parseFloat(document.getElementById("num2").value); 
             var resultado = 0;
 
             
